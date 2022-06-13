@@ -1,6 +1,13 @@
 @import "header";
 @import "footer";
 
+@mixin texto($size, $c){
+    font-family: 'Goldman', cursive;
+    font-weight: lighter;
+    font-size: $size;
+    color: $c;
+}
+
 $padd: 1.5rem;
 $img: 22rem;
 
@@ -17,11 +24,8 @@ body{
 main{
     section{
         h2{
-            color: white;
+            @include texto(2.5rem, white);
             margin-top: 50px;
-            font-family: 'Goldman', cursive;
-            font-weight: lighter;
-            font-size: 2.5rem;
             text-align: center;
             padding: $padd;
         }
@@ -32,10 +36,7 @@ main{
             }
         }
         h3{
-            color: grey;
-            font-family: 'Goldman', cursive;
-            font-weight: lighter;
-            font-size: $padd;
+            @include texto(1.5rem, gray);
             text-align: center;
             padding: $padd;
         }
